@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script> <!-- Replace with your key -->
+</head>
+<body>
+
+<header>
+    <h1>Welcome to TransApp</h1>
+    <nav>
+        <ul>
+            <li><a href="#sign-up">Sign Up</a></li>
+            <li><a href="#payment">Payment</a></li>
+            <li><a href="#taxi-request">Request Taxi</a></li>
+            <li><a href="#complaints">Complaints</a></li>
+            <li><a href="#latest-news">Latest News</a></li>
+            <li><a href="#taxi-structure">Taxi Structure</a></li>
+            <li><a href="#track-ride">Track Ride</a></li> <!-- Link to track ride -->
+        </ul>
+    </nav>
+</header>
+
+<!-- Latest News Section -->
+<section id="latest-news">
+    <h2>Latest News</h2>
+    <div id="newsContent"></div>
+</section>
+
+<!-- Taxi Structure Information -->
+<section id="taxi-structure">
+    <h2>Taxi Structure</h2>
+    <div id="taxiInfo"></div>
+</section>
+
+<!-- Track Ride Section -->
+<section id="track-ride">
+    <h2>Track Ride</h2>
+    <form id="trackRideForm">
+        <label for="rideId">Enter Ride ID:</label>
+        <input type="text" id="rideId" placeholder="Enter ride ID">
+        <button type="submit">Track Ride</button>
+    </form>
+    <div id="rideDetails">
+        <!-- Ride details will show here after tracking -->
+    </div>
+</section>
+
+<!-- Sign-Up Section -->
+<section id="sign-up">
+    <h2>Create an Account</h2>
+    <form id="signUpForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="isParent">Are you a parent?</label>
+        <input type="checkbox" id="isParent">
+
+        <div id="childDetails">
+            <label for="childName">Child's Name:</label>
+            <input type="text" id="childName" placeholder="Enter child's name">
+            
+            <label for="childAge">Child's Age:</label>
+            <input type="number" id="childAge" placeholder="Enter child's age">
+        </div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</section>
+
+<!-- Taxi Request Section -->
+<section id="taxi-request">
+    <h2>Request a Taxi</h2>
+    <form id="taxiRequestForm">
+        <label for="tripType">Trip Type:</label>
+        <select id="tripType">
+            <option value="local">Local</option>
+            <option value="provincial">Provincial</option>
+        </select>
+
